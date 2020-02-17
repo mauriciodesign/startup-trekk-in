@@ -1,0 +1,112 @@
+.navigation {
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    width: 100%;
+    background: $white;
+
+    &__center {
+        width: 80%;
+        margin: 0px auto;
+        padding-top: 20px;
+
+        @include mq(md) {
+            padding: 40px 0 10px 0;
+        }
+
+        @include mq(lg) {
+            width: 80%;
+        }
+    }
+
+    &__logo {
+        position: absolute;
+        margin: 1rem 0;
+        width: 38px;
+
+        @include mq(md) {
+            margin: 0.4rem 0;
+            width: auto;
+        }
+    }
+
+    &__collapsible {
+        text-align: right;
+
+        #menu {
+            display: none;
+        }
+
+        label {
+            display: block;
+            padding: .5em 0;
+            font-size: 2rem;
+
+            @include mq(md) {
+                display: none;
+            }
+        }
+
+        input:checked~.navigation__container {
+            max-height: 227px;
+        }
+    }
+}
+
+.navigation__container {
+    max-height: 0;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: max-height .5s ease-out;
+
+    @include mq(md) {
+        max-height: 100%;
+        padding: .8em;
+        overflow: visible;
+        justify-content: space-between;
+        flex-direction: row;
+        margin-left: 50px;
+    }
+}
+
+.navigation__list {
+    list-style: none;
+    margin-bottom: 15px;
+
+    @include mq(md) {
+        display: flex;
+        margin: 0;
+    }
+}
+
+.navigation__link {
+    display: block;
+    background: $white;
+    padding: .5em .8em;
+    font-size: $medium;
+    color: $nickel;
+    text-decoration: none;
+    text-align: center;
+    transition: background 500ms ease;
+
+    &-black {
+        margin-right: 0px;
+        color: $raising-black;
+
+        @include mq(md) {
+            margin-right: 5px;
+        }
+    }
+
+    &:hover {
+        background: $ball-blue;
+        color: $white;
+    }
+
+    @include mq(md) {
+        padding: .5em 1em;
+        font-size: $medium;
+    }
+}

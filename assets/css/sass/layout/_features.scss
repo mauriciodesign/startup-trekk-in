@@ -1,0 +1,55 @@
+/*Features*/
+
+.features {
+    width: 80%;
+    margin: 0 auto;
+    @include mq(sm){
+        width: 60%;
+    }
+    @include mq(lg){
+        width: 70%;
+    }
+    @include mq(xl){
+        width: 60%;
+    }
+
+    &__title {
+        text-align: center;
+        margin: 4rem 0;
+        @include mq(md){
+            font-size: $xxx-large;
+            margin: 0 0 5rem 0;
+        }
+    }
+
+    &__graphic_svg {
+        width: 100%;
+        margin-bottom: 40px;
+        grid-column: 1 / 13;
+        opacity: 0;
+        transition: all 800ms linear;
+        transition-delay: 0.5s;
+
+        @include mq(sm){
+            grid-column: 2 / 12;
+        }
+        @include mq(lg){
+            grid-column: 1 / 11;
+        }
+    }
+
+    &__graphic_animated{
+        opacity: 1;
+    }
+
+    &__subtitle {
+        margin-bottom: 14px;
+        text-align: center;
+        @include mq(md){
+            font-size: $x-large;
+        }
+        @include mq(lg){
+            text-align: left;
+        }
+    }
+}

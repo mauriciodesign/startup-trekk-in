@@ -1,0 +1,119 @@
+/*Cards*/
+
+.card {
+    &__content {
+        background: #fff;
+        padding: 50px 30px;
+        margin-bottom: 65px;
+        display: flex;
+        flex-wrap: wrap;
+        transform:scale(1);
+        transition: transform 500ms ease-in-out;
+        
+        &:hover{
+            transform:scale(0.95);
+        }
+        
+        @include mq(1500) {
+            margin-bottom: 16%;
+        }
+
+        @include mq(1762) {
+            margin-bottom: 32%;
+        }
+    }
+
+    &__body {
+        width: 100%;
+
+        &__price {
+            font-size: $xxxx-large;
+        }
+
+        &__title {
+            font-size: $x-large;
+            font-weight: 400;
+            margin-bottom: 10px;
+        }
+    }
+
+    &__buttom {
+        align-self: flex-end;
+        width: 100%;
+        font-size: $medium;
+
+        &_link {
+            padding: 10px;
+        }
+    }
+}
+
+.card{
+    &__items {
+        margin: 15px 0;
+        padding-left: 43px;
+        list-style: none;
+        position: relative;
+
+        &::before {
+            content: "\2022";
+            color: $raising-black;
+            font-size: 20px;
+            left: 13px;
+            position: absolute;
+            top: -2px;
+        }
+    }
+
+    &__line {
+        margin: 20px 0;
+    }
+}
+
+
+
+@include mq(sm) {
+
+    .card__content-left, .card__content-right {
+        grid-column: 3 / 11;
+    }
+}
+
+
+@include mq(md) {
+    .card__content-left {
+        grid-column: 1 / 12;
+    }
+
+    .card__content-right {
+        grid-column: 2 / 13;
+    }
+}
+
+@include mq(lg) {
+
+    .card__content-left,
+    .card__content-right {
+        grid-column: 2 / 12;
+    }
+}
+
+@include mq(xl) {
+    .card__content-left {
+        grid-column: 4 / 12;
+    }
+
+    .card__content-right {
+        grid-column: 2 / 10;
+    }
+}
+
+@include mq(1500) {
+    .card__content-left {
+        grid-column: 5 / 12;
+    }
+
+    .card__content-right {
+        grid-column: 2 / 9;
+    }
+}

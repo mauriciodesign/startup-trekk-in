@@ -1,0 +1,49 @@
+/*card*/
+
+.price {
+    width: 100%;
+    background: #333745;
+    position: relative;
+    margin-top: 10rem;
+
+    @include mq(1500) {
+        background: transparent;
+    }
+
+    @include mq(md) {
+        margin-top: 18rem;
+    }
+
+    @include mq(xl) {
+        margin-top: 23rem;
+    }
+
+    &__background {
+        position: absolute;
+        z-index: -6666;
+        width: 100%;
+
+        img {
+            margin-top: -20%;
+
+            @include mq(1500) {
+                margin-top: -17%;
+            }
+        }
+    }
+
+    &__container {
+        width: 80%;
+        margin: 0 auto;
+
+        &_title {
+            text-align: center;
+            margin: 0 0 56px 0;
+            color: $white;
+
+            @include mq(md) {
+                font-size: $xxx-large;
+            }
+        }
+    }
+}
