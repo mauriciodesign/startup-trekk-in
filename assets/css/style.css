@@ -17,8 +17,6 @@ p {
 /*Keyframes*/
 @keyframes fade {
   0% {
-    opacity: 0; }
-  20% {
     opacity: 0;
     transform: translate3d(0px, 20px, 0px); }
   100% {
@@ -331,7 +329,8 @@ p {
   .features__graphic_svg {
     width: 100%;
     margin-bottom: 40px;
-    grid-column: 1 / 13; }
+    grid-column: 1 / 13;
+    opacity: 0; }
     @media only screen and (min-width: 576px) {
       .features__graphic_svg {
         grid-column: 2 / 12; } }
@@ -339,7 +338,7 @@ p {
       .features__graphic_svg {
         grid-column: 1 / 11; } }
   .features__graphic_animated {
-    animation: fade 1.8s ease-out; }
+    animation: fade 1.8s .25s ease-out forwards; }
   .features__subtitle {
     margin-bottom: 14px;
     text-align: center; }

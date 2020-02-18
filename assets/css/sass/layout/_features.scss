@@ -26,6 +26,7 @@
         width: 100%;
         margin-bottom: 40px;
         grid-column: 1 / 13;
+        opacity: 0;
         @include mq(sm){
             grid-column: 2 / 12;
         }
@@ -33,9 +34,9 @@
             grid-column: 1 / 11;
         }
     }
-
+    
     &__graphic_animated{
-        animation: fade 1.8s ease-out; 
+        animation: fade 1.8s .2s ease-out forwards; 
     }
 
     &__subtitle {
