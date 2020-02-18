@@ -18,7 +18,7 @@ p {
 @keyframes fade {
   0% {
     opacity: 0; }
-  15% {
+  20% {
     opacity: 0;
     transform: translate3d(0px, 20px, 0px); }
   100% {
